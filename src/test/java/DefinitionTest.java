@@ -2,10 +2,10 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class DefinitionTest {
-//   @After
-//   public void tearDown() {
-//     Definition.clear();
-//   }
+  @After
+  public void tearDown() {
+    Definition.clear();
+  }
 
   @Test
   public void Definition_instantiatesCorrectly_true() {
@@ -38,14 +38,14 @@ public class DefinitionTest {
     assertTrue(Definition.all().contains(firstDefinition));
     assertTrue(Definition.all().contains(secondDefinition));
   }
-  //
-  // @Test
-  // public void clear_emptiesAllDefinitionsFromArrayList_0() {
-  //   Definition myDefinition = new Definition("Mow the lawn");
-  //   Definition.clear();
-  //   assertEquals(Definition.all().size(), 0);
-  // }
-  //
+
+  @Test
+  public void clear_emptiesAllDefinitionsFromArrayList_0() {
+    Definition myDefinition = new Definition("greet someone");
+    Definition.clear();
+    assertEquals(Definition.all().size(), 0);
+  }
+
   // @Test
   // public void getId_tasksInstantiateWithAnID_1() {
   //   Definition myDefinition = new Definition("Mow the lawn");

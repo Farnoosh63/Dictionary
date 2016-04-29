@@ -31,10 +31,10 @@ public class Definition {
   public static ArrayList<Definition> all() {
     return instances;
   }
-  //
-  // public static void clear() {
-  //   instances.clear();
-  // }
+  
+  public static void clear() {
+    instances.clear();
+  }
   //
   // public int getId() {
   //   return mId;
