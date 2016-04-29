@@ -2,6 +2,9 @@ import java.util.HashMap;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Map;
 
 public class App {
   public static void main(String[] args) {
@@ -18,28 +21,24 @@ public class App {
     staticFileLocation("/public");
     String layout = "templates/layout.vtl";
 
+
     get("/", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    // // display form
-    // get("/categories/new", (request, response) -> {
-    //   HashMap<String, Object> model = new HashMap<String, Object>();
-    //   model.put("template", "templates/category-form.vtl");
-    //   return new ModelAndView(model, layout);
-    // }, new VelocityTemplateEngine());
-    //
-    // // process form
+
     post("/words", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
       String inputtedString = request.queryParams("word");
       Word userInput = new Word(inputtedString);
+
       model.put("word", userInput);
       model.put("template", "templates/word-success.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
 
     get("/words", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
@@ -48,45 +47,35 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    //
-    // get("/categories", (request, response) -> {
-    //   HashMap<String, Object> model = new HashMap<String, Object>();
-    //
-    //   model.put("categories", Word.all());
-    //   model.put("template", "templates/categories.vtl");
-    //   return new ModelAndView(model, layout);
-    // }, new VelocityTemplateEngine());
-    //
-    // get("/categories/:id", (request, response) -> {
-    //   HashMap<String, Object> model = new HashMap<String, Object>();
-    //   Word categoryInput = Word.find(Integer.parseInt(request.params(":id")));
-    //   model.put("category", categoryInput);
-    //   model.put("template", "templates/category.vtl");
-    //   return new ModelAndView(model, layout);
-    // }, new VelocityTemplateEngine());
-    //
-    // get("categories/:id/tasks/new", (request, response) -> {
-    //   HashMap<String, Object> model = new HashMap<String, Object>();
-    //   Word category = Word.find(Integer.parseInt(request.params(":id")));
-    //   model.put("category", category);
-    //   model.put("template", "templates/task-category-form.vtl");
-    //   return new ModelAndView(model, layout);
-    // }, new VelocityTemplateEngine());
-    //
-    // post("/tasks", (request,response) -> {
-    //   HashMap<String, Object> model = new HashMap<String, Object>();
-    //
-    //   Word category = Word.find(Integer.parseInt(request.queryParams("categoryId")));
-    //
-    //   String description = request.queryParams("description");
-    //   Definition newDefinition = new Definition(description);
-    //
-    //   category.addDefinition(newDefinition);
-    //
-    //   model.put("category", category);
-    //   model.put("template", "templates/category-tasks-success.vtl");
-    //   return new ModelAndView(model, layout);
-    // }, new VelocityTemplateEngine());
 
+    get("/words/:id", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      Word wordInput = Word.find(Integer.parseInt(request.params(":id")));
+      model.put("word", wordInput);
+      model.put("template", "templates/definition-list.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+
+    get("words/:id/definitions/new", (request, response) -> {
+       HashMap<String, Object> model = new HashMap<String, Object>();
+       Word word = Word.find(Integer.parseInt(request.params(":id")));
+       model.put("word", word);
+       model.put("template", "templates/definitionform.vtl");
+       return new ModelAndView(model, layout);
+     }, new VelocityTemplateEngine());
+
+
+    post("/definitions", (request,response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      Word word = Word.find(Integer.parseInt(request.queryParams("wordId")));
+      String inputteddefinition = request.queryParams("definition");
+      Definition newDefinition = new Definition(inputteddefinition);
+      word.addDefinition(newDefinition);
+      model.put("word", word);
+      model.put("template", "templates/definition-success.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+    
   }
 }

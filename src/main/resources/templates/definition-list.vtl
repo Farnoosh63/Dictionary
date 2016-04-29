@@ -1,0 +1,12 @@
+<h1>$word.getWord() definitions:</h1>
+
+
+<ul>
+  #foreach($definition in $word.getDefinitions())
+   <li>$definition.getMeaning()</li>
+  #end
+</ul>
+
+
+<a href="/words/$word.getId()/definitions/new" class="button button1">Add more definition for this word</a>
+<a href="/words" class="button button1">Your dictionary Home page</a>

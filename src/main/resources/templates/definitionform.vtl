@@ -1,0 +1,39 @@
+<title>Dictionary Definition Page</title>
+<body>
+  <div class="container">
+    <h1>Add a Definition to $word.getWord()</h1>
+
+    <form action="/definitions" method="post">
+      <input id="wordId" name="wordId" type="hidden" value="$word.getId()">
+      <div class="form-group">
+        <label for="definition">Add <strong>$word.getWord()</strong> definition</label>
+        <input id="definition" name="definition" type="text" class="form-control" placeholder="Enter a statement here">
+      </div>
+
+      <button type="submit" class="btn btn-success">Add to definition list</button>
+    </form>
+
+
+    <a href="/words" class="button button1">View Word List</a>
+    <a href="/words" class="button button1">Add a New Word</a>
+  </div>
+
+
+<h3>$word.getWord() definitions:</h3>
+  <table class="table">
+    <ul>
+      #foreach($definition in $word.getDefinitions())
+       <li>$definition.getMeaning()</li>
+      #end
+    </ul>
+
+</table>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">Farnoosh Johnson Code Review2, Java class @
+        <a href="http://www.epicodus.com/">epicodus</a>
+      </p>
+    </div>
+  </footer>
+</body>

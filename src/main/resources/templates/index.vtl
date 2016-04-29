@@ -21,7 +21,7 @@
   #if($words)
   <ul>
     #foreach($word in $words)
-     <li><a href="/words/$word.getId()">$word.getWord()</a></li>
+     <li>$word.getWord() <a href="/words/$word.getId()/definitions/new" class="button button1">Add Definition</a></li>
     #end
   </ul>
   #end
