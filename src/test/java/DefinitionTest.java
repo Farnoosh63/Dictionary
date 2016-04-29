@@ -12,12 +12,12 @@ public class DefinitionTest {
     Definition myDefinition = new Definition("greet someone");
     assertEquals(true, myDefinition instanceof Definition);
   }
-  
-  // @Test
-  // public void Definition_instantiatesWithDescription_String() {
-  //   Definition myDefinition = new Definition("Mow the lawn");
-  //   assertEquals("Mow the lawn", myDefinition.getDescription());
-  // }
+
+  @Test
+  public void Definition_instantiatesWithStatement_String() {
+    Definition myDefinition = new Definition("greet someone");
+    assertEquals("greet someone", myDefinition.getMeaning());
+  }
   //
   // @Test
   // public void isCompleted_isFalseAfterInstantiation_false() {
