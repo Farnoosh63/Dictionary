@@ -13,12 +13,12 @@ public class WordTest {
     Word testWord = new Word("Hello");
     assertEquals(true, testWord instanceof Word);
   }
-//
-//   @Test
-//   public void getName_categoryInstantiatesWithName_Home() {
-//     Word testWord = new Word("Home");
-//     assertEquals("Home", testWord.getName());
-//   }
+
+  @Test
+  public void getWord_wordInstantiatesWithOneWord_Hello() {
+    Word testWord = new Word("Hello");
+    assertEquals("Hello", testWord.getWord());
+  }
 //
 //   @Test
 //   public void all_returnsAllInstancesOfWord_true() {

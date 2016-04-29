@@ -11,11 +11,10 @@ public class Word {
     // instances.add(this);
     // mId = instances.size();
     // mDefinition= new ArrayList<Definition>();
-
   }
-//   public String getName(){
-//     return mName;
-// }
+  public String getWord(){
+    return mWord;
+  }
 //  public static ArrayList<Word> all() {
 //    return instances;
 //  }
