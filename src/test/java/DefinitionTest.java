@@ -2,11 +2,11 @@ import org.junit.*;
 import static org.junit.Assert.*;
 import java.time.LocalDateTime;
 
-public class DefinitionTest {
-  @After
-  public void tearDown() {
-    Definition.clear();
-  }
+// public class DefinitionTest {
+//   @After
+//   public void tearDown() {
+//     Definition.clear();
+//   }
 
   // @Test
   // public void Definition_instantiatesCorrectly_true() {
@@ -65,4 +65,4 @@ public class DefinitionTest {
   //   assertTrue(Definition.find(999) == null);
   // }
 
-}
+// }

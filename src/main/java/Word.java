@@ -1,18 +1,18 @@
 import java.util.ArrayList;
 
 public class Word {
-//   private String mName;
+  private String mWord;
 //   private static ArrayList<Word> instances = new ArrayList<Word>();
 //   private int mId;
 //   private ArrayList<Definition> mDefinition;
 //
-//   public Word (String name){
-//     mName = name;
-//     instances.add(this);
-//     mId = instances.size();
-//     mDefinition= new ArrayList<Definition>();
-//
-//   }
+  public Word (String oneWord){
+    mWord = oneWord;
+    // instances.add(this);
+    // mId = instances.size();
+    // mDefinition= new ArrayList<Definition>();
+
+  }
 //   public String getName(){
 //     return mName;
 // }
