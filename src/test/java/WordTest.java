@@ -47,11 +47,11 @@ public class WordTest {
     Word secondWord = new Word("Java");
     assertEquals(Word.find(secondWord.getId()), secondWord);
   }
-//
-//   @Test
-//   public void find_returnsNullWhenNoWordFound_null() {
-//     assertTrue(Word.find(999) == null);
-//   }
+
+  @Test
+  public void find_returnsNullWhenNoWordFound_null() {
+    assertTrue(Word.find(999) == null);
+  }
 //
 //   @Test
 //   public void addDefinition_addsDefinitionToList_true() {
