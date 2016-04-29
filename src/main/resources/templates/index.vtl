@@ -3,7 +3,7 @@
   <div class="container">
     <h1>Dictionary Creator</h1>
 
-    <form action="/word" method="post">
+    <form action="/words" method="post">
       <div class="form-group">
         <label for="word">Add a word</label>
         <input id="word" name="word" type="text" class="form-control" placeholder="Enter a word here">
@@ -14,8 +14,18 @@
 
 
     <a href="/words" class="button button1">View Word List</a>
-    <a href="/word/new" class="button button1">Add a New Word</a>
+    <a href="/words" class="button button1">Add a New Word</a>
   </div>
+
+  <table class="table">
+  #if($words)
+  <ul>
+    #foreach($word in $words)
+     <li><a href="/words/$word.getId()">$word.getWord()</a></li>
+    #end
+  </ul>
+  #end
+</table>
 
   <footer class="footer">
     <div class="container">
