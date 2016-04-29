@@ -46,22 +46,22 @@ public class DefinitionTest {
     assertEquals(Definition.all().size(), 0);
   }
 
-  // @Test
-  // public void getId_tasksInstantiateWithAnID_1() {
-  //   Definition myDefinition = new Definition("Mow the lawn");
-  //   assertEquals(1, myDefinition.getId());
-  // }
-  //
-  // @Test
-  // public void find_returnsDefinitionWithSameId_secondDefinition() {
-  //   Definition firstDefinition = new Definition("Mow the lawn");
-  //   Definition secondDefinition = new Definition("Buy groceries");
-  //   assertEquals(Definition.find(secondDefinition.getId()), secondDefinition);
-  // }
-  //
-  // @Test
-  // public void find_returnsNullWhenNoDefinitionFound_null() {
-  //   assertTrue(Definition.find(999) == null);
-  // }
+  @Test
+  public void getId_definitionInstantiateWithAnID_1() {
+    Definition myDefinition = new Definition("expressing sarcasm or anger");
+    assertEquals(1, myDefinition.getId());
+  }
+
+  @Test
+  public void find_returnsDefinitionWithSameId_secondDefinition() {
+    Definition firstDefinition = new Definition("greet someone");
+    Definition secondDefinition = new Definition("expressing sarcasm or anger");
+    assertEquals(Definition.find(secondDefinition.getId()), secondDefinition);
+  }
+  
+  @Test
+  public void find_returnsNullWhenNoDefinitionFound_null() {
+    assertTrue(Definition.find(999) == null);
+  }
 
 }
