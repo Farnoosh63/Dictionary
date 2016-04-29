@@ -29,17 +29,17 @@ public class WordTest {
   }
 
   @Test
-  public void clear_emptiesAllCategoriesFromList_0() {
+  public void clear_emptiesAllWordList_0() {
     Word testWord = new Word("Hello");
     Word.clear();
     assertEquals(Word.all().size(), 0);
   }
-//
-//   @Test
-//   public void getId_categoriesInstantiateWithAnId_1() {
-//     Word testWord = new Word("Home");
-//     assertEquals(1, testWord.getId());
-//   }
+
+  @Test
+  public void getId_wordInstantiateWithAnId_1() {
+    Word testWord = new Word("Hello");
+    assertEquals(1, testWord.getId());
+  }
 //
 //   @Test
 //   public void find_returnsWordWithSameId_secondWord() {
