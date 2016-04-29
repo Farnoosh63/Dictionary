@@ -24,36 +24,36 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Farnoosh Johnson Code Review2");
   }
 
-//   @Test
-//   public void categoryIsCreatedTest() {
-//     goTo("http://localhost:4567/");
-//     click("a", withText("Add a New Word"));
-//     fill("#name").with("Household chores");
-//     submit(".btn");
-//     assertThat(pageSource()).contains("Your category has been saved.");
-//   }
-//   @Test
-//     public void categoryIsDisplayedTest() {
-//     goTo("http://localhost:4567/categories/new");
-//     fill("#name").with("Household chores");
-//     submit(".btn");
-//     click("a", withText("All categories"));
-//     assertThat(pageSource()).contains("Household chores");
-//     }
+  @Test
+  public void wordsCreatedTest() {
+    goTo("http://localhost:4567/");
+    fill("#word").with("Hello");
+    submit(".btn");
+    assertThat(pageSource()).contains("Success!");
+  }
+
+  // @Test
+  //   public void categoryIsDisplayedTest() {
+  //   goTo("http://localhost:4567/categories/new");
+  //   fill("#name").with("Household chores");
+  //   submit(".btn");
+  //   click("a", withText("All categories"));
+  //   assertThat(pageSource()).contains("Household chores");
+  //   }
 //
-//   @Test
-//     public void twoCategoriesIsDisplayedTest() {
-//     goTo("http://localhost:4567/categories/new");
-//     fill("#name").with("Household chores");
-//     submit(".btn");
-//     click("a", withText("All categories"));
-//     click("a", withText("Add New category"));
-//     fill("#name").with("Outside chores");
-//     submit(".btn");
-//     click("a", withText("All categories"));
-//     assertThat(pageSource()).contains("Household chores");
-//     assertThat(pageSource()).contains("Outside chores");
-//     }
+  @Test
+  public void twoWordsDisplayedTest() {
+    goTo("http://localhost:4567/");
+    fill("#word").with("Hello");
+    submit(".btn");
+    assertThat(pageSource()).contains("Success!");
+    click("a", withText("go back"));
+    fill("#word").with("Java");
+    submit(".btn");
+    click("a", withText("go back"));
+    assertThat(pageSource()).contains("Hello");
+    assertThat(pageSource()).contains("Java");
+    }
 //
 //   @Test
 //   public void categoryShowPageDisplaysName() {
