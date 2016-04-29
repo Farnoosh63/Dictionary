@@ -18,19 +18,7 @@ public class DefinitionTest {
     Definition myDefinition = new Definition("greet someone");
     assertEquals("greet someone", myDefinition.getMeaning());
   }
-  //
-  // @Test
-  // public void isCompleted_isFalseAfterInstantiation_false() {
-  //   Definition myDefinition = new Definition("Mow the lawn");
-  //   assertEquals(false, myDefinition.isCompleted());
-  // }
-  //
-  // @Test
-  // public void getCreatedAt_instantiatesWithCurrentTime_today() {
-  //   Definition myDefinition = new Definition("Mow the lawn");
-  //   assertEquals(LocalDateTime.now().getDayOfWeek(), myDefinition.getCreatedAt().getDayOfWeek());
-  // }
-  //
+  
   @Test
   public void all_returnsAllInstancesOfDefinition_true() {
     Definition firstDefinition = new Definition("greet someone");
@@ -58,9 +46,9 @@ public class DefinitionTest {
     Definition secondDefinition = new Definition("expressing sarcasm or anger");
     assertEquals(Definition.find(secondDefinition.getId()), secondDefinition);
   }
-  
+
   @Test
-  public void find_returnsNullWhenNoDefinitionFound_null() {
+  public void find_returnsNullWhenDefinitionNotFound_null() {
     assertTrue(Definition.find(999) == null);
   }
 
