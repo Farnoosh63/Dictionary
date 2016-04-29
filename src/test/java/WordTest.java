@@ -40,13 +40,13 @@ public class WordTest {
     Word testWord = new Word("Hello");
     assertEquals(1, testWord.getId());
   }
-//
-//   @Test
-//   public void find_returnsWordWithSameId_secondWord() {
-//     Word firstWord = new Word("Home");
-//     Word secondWord = new Word("Work");
-//     assertEquals(Word.find(secondWord.getId()), secondWord);
-//   }
+
+  @Test
+  public void find_returnsWordWithSameId_secondWord() {
+    Word firstWord = new Word("Home");
+    Word secondWord = new Word("Java");
+    assertEquals(Word.find(secondWord.getId()), secondWord);
+  }
 //
 //   @Test
 //   public void find_returnsNullWhenNoWordFound_null() {
