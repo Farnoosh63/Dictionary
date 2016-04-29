@@ -3,8 +3,18 @@
   <div class="container">
     <h1>Dictionary Creator</h1>
 
-    <a href="/categories">View Word List</a>
-    <a href="/categories/new">Add a New Word</a>
+    <form action="/word" method="post">
+      <div class="form-group">
+        <label for="word">enter a word</label>
+        <input id="word" name="word" type="text" class="form-control">
+      </div>
+
+      <button type="submit" class="btn btn-success">Add to the word list</button>
+    </form>
+
+
+    <a href="/words">View Word List</a>
+    <a href="/word/new">Add a New Word</a>
   </div>
 
   <footer class="footer">
