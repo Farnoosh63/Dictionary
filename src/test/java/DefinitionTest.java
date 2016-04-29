@@ -7,12 +7,12 @@ public class DefinitionTest {
 //     Definition.clear();
 //   }
 
-  // @Test
-  // public void Definition_instantiatesCorrectly_true() {
-  //   Definition myDefinition = new Definition("Mow the lawn");
-  //   assertEquals(true, myDefinition instanceof Definition);
-  // }
-  //
+  @Test
+  public void Definition_instantiatesCorrectly_true() {
+    Definition myDefinition = new Definition("greet someone");
+    assertEquals(true, myDefinition instanceof Definition);
+  }
+  
   // @Test
   // public void Definition_instantiatesWithDescription_String() {
   //   Definition myDefinition = new Definition("Mow the lawn");
