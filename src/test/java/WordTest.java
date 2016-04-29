@@ -43,7 +43,7 @@ public class WordTest {
 
   @Test
   public void find_returnsWordWithSameId_secondWord() {
-    Word firstWord = new Word("Home");
+    Word firstWord = new Word("Hello");
     Word secondWord = new Word("Java");
     assertEquals(Word.find(secondWord.getId()), secondWord);
   }
@@ -52,12 +52,12 @@ public class WordTest {
   public void find_returnsNullWhenNoWordFound_null() {
     assertTrue(Word.find(999) == null);
   }
-//
-//   @Test
-//   public void addDefinition_addsDefinitionToList_true() {
-//     Word testWord = new Word("Home");
-//     Definition testDefinition = new Definition("Mow the lawn");
-//     testWord.addDefinition(testDefinition);
-//     assertTrue(testWord.getDefinitions().contains(testDefinition));
-//   }
+
+  @Test
+  public void addDefinition_addDefinitionForWord_true() {
+    Word testWord = new Word("Hello");
+    Definition testDefinition = new Definition("greet someone");
+    testWord.addDefinition(testDefinition);
+    assertTrue(testWord.getDefinitions().contains(testDefinition));
+  }
 }

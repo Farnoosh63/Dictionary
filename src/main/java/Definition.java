@@ -2,19 +2,19 @@ import java.util.ArrayList;
 // import java.time.LocalDateTime;
 
 public class Definition {
-  // private String mDescription;
+  private String mStatement;
   // private boolean mCompleted;
   // private LocalDateTime mCreatedAt;
   // private static ArrayList<Definition> instances = new ArrayList<Definition>();
   // private int mId;
   //
-  // public Definition(String description) {
-  //   mDescription = description;
+  public Definition(String statement) {
+    mStatement = statement;
   //   mCompleted = false;
   //   mCreatedAt = LocalDateTime.now();
   //   instances.add(this);
   //   mId = instances.size();
-  // }
+  }
   //
   // public String getDescription() {
   //   return mDescription;

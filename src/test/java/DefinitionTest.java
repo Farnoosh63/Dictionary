@@ -1,8 +1,7 @@
 import org.junit.*;
 import static org.junit.Assert.*;
-import java.time.LocalDateTime;
 
-// public class DefinitionTest {
+public class DefinitionTest {
 //   @After
 //   public void tearDown() {
 //     Definition.clear();
@@ -65,4 +64,4 @@ import java.time.LocalDateTime;
   //   assertTrue(Definition.find(999) == null);
   // }
 
-// }
+}

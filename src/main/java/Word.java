@@ -4,13 +4,13 @@ public class Word {
   private String mWord;
   private static ArrayList<Word> instances = new ArrayList<Word>();
   private int mId;
-//   private ArrayList<Definition> mDefinition;
-//
+  private ArrayList<Definition> mDefinition;
+
   public Word (String oneWord){
     mWord = oneWord;
     instances.add(this);
     mId = instances.size();
-    // mDefinition= new ArrayList<Definition>();
+    mDefinition= new ArrayList<Definition>();
   }
   public String getWord(){
     return mWord;
@@ -35,12 +35,12 @@ public class Word {
       return null;
     }
   }
-//
-//  public ArrayList<Definition> getDefinitions() {
-//    return mDefinition;
-//  }
 
- // public void addDefinition(Definition task) {
- //    mDefinition.add(task);
- // }
+  public ArrayList<Definition> getDefinitions() {
+   return mDefinition;
+  }
+
+  public void addDefinition(Definition word) {
+    mDefinition.add(word);
+  }
 }
