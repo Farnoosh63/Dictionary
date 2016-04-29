@@ -31,13 +31,13 @@ public class DefinitionTest {
   //   assertEquals(LocalDateTime.now().getDayOfWeek(), myDefinition.getCreatedAt().getDayOfWeek());
   // }
   //
-  // @Test
-  // public void all_returnsAllInstancesOfDefinition_true() {
-  //   Definition firstDefinition = new Definition("Mow the lawn");
-  //   Definition secondDefinition = new Definition("Buy groceries");
-  //   assertTrue(Definition.all().contains(firstDefinition));
-  //   assertTrue(Definition.all().contains(secondDefinition));
-  // }
+  @Test
+  public void all_returnsAllInstancesOfDefinition_true() {
+    Definition firstDefinition = new Definition("greet someone");
+    Definition secondDefinition = new Definition("expressing sarcasm or anger");
+    assertTrue(Definition.all().contains(firstDefinition));
+    assertTrue(Definition.all().contains(secondDefinition));
+  }
   //
   // @Test
   // public void clear_emptiesAllDefinitionsFromArrayList_0() {
