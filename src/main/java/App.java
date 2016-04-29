@@ -33,7 +33,6 @@ public class App {
       HashMap<String, Object> model = new HashMap<String, Object>();
       String inputtedString = request.queryParams("word");
       Word userInput = new Word(inputtedString);
-
       model.put("word", userInput);
       model.put("template", "templates/word-success.vtl");
       return new ModelAndView(model, layout);
@@ -76,6 +75,6 @@ public class App {
       model.put("template", "templates/definition-success.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
-    
+
   }
 }
