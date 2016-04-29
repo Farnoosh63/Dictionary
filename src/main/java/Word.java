@@ -2,26 +2,27 @@ import java.util.ArrayList;
 
 public class Word {
   private String mWord;
-//   private static ArrayList<Word> instances = new ArrayList<Word>();
+  private static ArrayList<Word> instances = new ArrayList<Word>();
 //   private int mId;
 //   private ArrayList<Definition> mDefinition;
 //
   public Word (String oneWord){
     mWord = oneWord;
-    // instances.add(this);
+    instances.add(this);
     // mId = instances.size();
     // mDefinition= new ArrayList<Definition>();
   }
   public String getWord(){
     return mWord;
   }
-//  public static ArrayList<Word> all() {
-//    return instances;
-//  }
-//
-//  public static void clear() {
-//    instances.clear();
-//  }
+
+  public static ArrayList<Word> all() {
+    return instances;
+  }
+
+  public static void clear() {
+    instances.clear();
+  }
 //
 //  public int getId() {
 //    return mId;

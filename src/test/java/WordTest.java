@@ -2,11 +2,11 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class WordTest {
-  // @After
-  // public void tearDown() {
-  //   Word.clear();
-  //   Definition.clear();
-  // }
+  @After
+  public void tearDown() {
+    Word.clear();
+    // Definition.clear();
+  }
 
   @Test
   public void word_instantiatesCorrectly_true() {
@@ -19,14 +19,14 @@ public class WordTest {
     Word testWord = new Word("Hello");
     assertEquals("Hello", testWord.getWord());
   }
-//
-//   @Test
-//   public void all_returnsAllInstancesOfWord_true() {
-//     Word firstWord = new Word("Home");
-//     Word secondWord = new Word("Work");
-//     assertTrue(Word.all().contains(firstWord));
-//     assertTrue(Word.all().contains(secondWord));
-//   }
+
+  @Test
+  public void all_returnsAllInstancesOfWord_true() {
+    Word firstWord = new Word("Hello");
+    Word secondWord = new Word("Java");
+    assertTrue(Word.all().contains(firstWord));
+    assertTrue(Word.all().contains(secondWord));
+  }
 //
 //   @Test
 //   public void clear_emptiesAllCategoriesFromList_0() {
