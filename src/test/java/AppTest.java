@@ -80,7 +80,7 @@ public class AppTest extends FluentTest {
   }
 
   @Test
-  public void wordShowAddDefinitionSuccess() {
+  public void TwowordsShowAddDefinitionSuccess() {
     goTo("http://localhost:4567/words");
     fill("#word").with("Java");
     submit(".btn");
