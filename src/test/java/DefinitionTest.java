@@ -18,7 +18,7 @@ public class DefinitionTest {
     Definition myDefinition = new Definition("greet someone");
     assertEquals("greet someone", myDefinition.getMeaning());
   }
-  
+
   @Test
   public void all_returnsAllInstancesOfDefinition_true() {
     Definition firstDefinition = new Definition("greet someone");

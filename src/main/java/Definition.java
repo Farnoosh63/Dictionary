@@ -4,7 +4,7 @@ public class Definition {
   private String mMeaning;
   private static ArrayList<Definition> instances = new ArrayList<Definition>();
   private int mId;
-  //
+
   public Definition(String statement) {
     mMeaning = statement;
     instances.add(this);
