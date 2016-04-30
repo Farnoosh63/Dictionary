@@ -39,7 +39,7 @@ This website is designed with bootstrap _version 3.3.6_ and including following 
 
 ###### Thanks
 
-**Accessing to the remote repository on account :** [farnoosh63]https://github.com/Farnoosh63/Dictionary)
+**Accessing to the remote repository on account :** [farnoosh63](https://github.com/Farnoosh63/Dictionary)
 
 **Accessing to github pages for this application :**
 > there is no github page created for this app
